@@ -1,0 +1,31 @@
+<h2 mat-dialog-title> Select Your locations </h2>
+
+<p>: {{latitude}},{{longitude}}
+  &nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+    <mat-select placeholder="UserName"  [(ngModel)]="member.memberNameSelect"   name="memberNeme">
+      <mat-option *ngFor="let member of memberNeme" [value]="member.meid" (click)="addMember()">
+        {{member.nameM}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</p>
+
+<mat-dialog-content>
+  <agm-map [latitude]="latitude"
+           [longitude]="longitude"
+           (mapClick)="onChoseLocation($event)"
+           [zoom]="zoom">
+    <agm-marker
+      [latitude]="latitude"
+      [longitude]="longitude"
+      *ngIf="locationChosen"
+      ></agm-marker>
+  </agm-map>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" mat-dialog-close (click)="clickEnter()">Enter</button>
+  <button mat-raised-button mat-dialog-close>Close</button>
+
+
+</mat-dialog-actions>
