@@ -12,12 +12,6 @@ import java.util.stream.Collectors;
 public class ProvinceController {
 
     @Autowired
-    private MemberRepository memberRepository;
-    @Autowired
-    private NametypeRepository nametypeRepository;
-    @Autowired
-    private GenderRepository genderRepository;
-    @Autowired
     private final ProvinceRepository provinceRepository;
 
     ProvinceController(ProvinceRepository provinceRepository) {

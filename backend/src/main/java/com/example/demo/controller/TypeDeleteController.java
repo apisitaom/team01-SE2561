@@ -26,8 +26,6 @@ public class TypeDeleteController {
     @PostMapping(path = "/typedelete")
     private TypeDelete newtypeDelete(@RequestBody TypeDelete newttypeDelete, @PathVariable Long typedeleteid, @PathVariable String typeD) {
 
-        TypeDelete newtypedelete = new TypeDelete();
-
         newttypeDelete.setTyptD(typeD);
         newttypeDelete.setTypedeleteid(typedeleteid);
 

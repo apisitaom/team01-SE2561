@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 public class Allcontroller{
     @Autowired private CoffeeMenuRepository coffeeMenuRepository;
     @Autowired private CoffeeOrderRepository coffeeOrderRepository;
-    @Autowired private CustomerRepository customerRepository;
     @Autowired private StaffRepository staffRepository;
     @Autowired private OrderTypeRepository orderTypeRepository;
     @Autowired private MemberRepository memberRepository;

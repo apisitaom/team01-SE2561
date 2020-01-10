@@ -42,7 +42,6 @@ public class DeliveryController {
         Delivery delivery = new Delivery();
         Status status1 = new Status();
 
-        Staff staff1 = new Staff();
         CoffeeDelivery cd = new CoffeeDelivery();
 
         cd = coffeeDeliveryRepository.findByCoffeeDeliveryId(did);
